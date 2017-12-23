@@ -2,7 +2,7 @@
 
 namespace c3037\Otus\FirstWeek\Library;
 
-use c3037\Otus\FirstWeek\Library\IgnoreChar\IgnoredCharContainerInterface;
+use c3037\Otus\FirstWeek\Library\IgnoredChar\IgnoredCharContainerInterface;
 use c3037\Otus\FirstWeek\Library\OpenedSymbols\OpenedSymbolStackFactoryInterface;
 use c3037\Otus\FirstWeek\Library\OpenedSymbols\OpenedSymbolStackInterface;
 use c3037\Otus\FirstWeek\Library\ValidationPair\ValidationPairContainerInterface;

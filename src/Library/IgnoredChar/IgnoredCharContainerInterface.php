@@ -1,6 +1,6 @@
 <?php
 
-namespace c3037\Otus\FirstWeek\Library\IgnoreChar;
+namespace c3037\Otus\FirstWeek\Library\IgnoredChar;
 
 interface IgnoredCharContainerInterface
 {
