@@ -1,0 +1,32 @@
+{
+    "name": "c3037/otus-firstWeek-library",
+    "authors": [
+        {
+            "name": "Dmitry P.",
+            "email": "dmitry.porozhnyakov@mail.ru"
+        }
+    ],
+    "require": {
+        "php": "^7.1.12"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^6.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "c3037\\Otus\\FirstWeek\\Library\\": "src/Library/",
+            "c3037\\Otus\\FirstWeek\\Library\\Tests\\": "tests/Library/"
+        }
+    },
+    "scripts": {
+        "copy-phpunit-config": [
+            "cp -n tests/phpunit.xml.dist tests/phpunit.xml"
+        ],
+        "post-install-cmd": [
+            "@copy-phpunit-config"
+        ],
+        "post-update-cmd": [
+            "@copy-phpunit-config"
+        ]
+    }
+}

@@ -1,0 +1,5 @@
+.idea/
+.DS_Store
+/tests/phpunit.xml
+/tests/log/
+/vendor/
