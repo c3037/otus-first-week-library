@@ -51,7 +51,10 @@ final class Validator implements ValidatorInterface
             $currentSymbol = mb_substr($string, $i, 1);
 
             if (!$this->isAllowedSymbol($currentSymbol)) {
-                throw new InvalidArgumentException('Validatable string contains not allowed chars');
+                throw
+                    new InvalidArgumentException(
+                        sprintf("Validatable string contains not allowed char '%s'", $currentSymbol)
+                    );
             }
             $this->checkOpenCloseSequenceOnStack($openedSymbolStack, $currentSymbol);
         }
