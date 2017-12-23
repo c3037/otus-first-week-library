@@ -10,23 +10,18 @@ interface OpenedSymbolStackInterface
     public function isEmpty(): bool;
 
     /**
-     * @return null|string
-     */
-    public function current(): ?string;
-
-    /**
-     * @param string $item
+     * @param null|string $item
      * @return void
      */
-    public function add(string $item): void;
+    public function add(?string $item): void;
+
+    /**
+     * @return null|string
+     */
+    public function getLast(): ?string;
 
     /**
      * @return void
      */
     public function deleteLast(): void;
-
-    /**
-     * @return void
-     */
-    public function markAsReadOnly(): void;
 }

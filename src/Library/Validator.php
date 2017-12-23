@@ -86,10 +86,10 @@ final class Validator implements ValidatorInterface
         if ($this->validationPairs->isOpenSymbol($symbol)) {
             $stack->add($symbol);
         } elseif ($this->validationPairs->isCloseSymbol($symbol)) {
-            if ($symbol === $this->validationPairs->getCloseByOpenSymbol($stack->current())) {
+            if ($stack->getLast() && $symbol === $this->validationPairs->getCloseByOpenSymbol($stack->getLast())) {
                 $stack->deleteLast();
             } else {
-                $stack->markAsReadOnly();
+                $stack->add(null);
             }
         }
     }
