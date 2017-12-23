@@ -14,7 +14,7 @@ final class IgnoredChar implements IgnoredCharInterface
      */
     public function __construct(string $char)
     {
-        \assert(mb_strlen($char) === 1);
+        \assert(mb_strlen($char) === 1, sprintf("Char '%s' is invalid", $char));
 
         $this->char = $char;
     }

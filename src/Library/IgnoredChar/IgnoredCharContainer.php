@@ -7,7 +7,7 @@ final class IgnoredCharContainer implements IgnoredCharContainerInterface
     /**
      * @var int[]
      */
-    private $chars;
+    private $chars = [];
 
     /**
      * {@inheritdoc}

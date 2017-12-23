@@ -7,7 +7,7 @@ final class ValidationPairContainer implements ValidationPairContainerInterface
     /**
      * @var string[]
      */
-    private $pairs;
+    private $pairs = [];
 
     /**
      * {@inheritdoc}
