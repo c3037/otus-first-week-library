@@ -28,5 +28,6 @@
         "post-update-cmd": [
             "@copy-phpunit-config"
         ]
-    }
+    },
+    "license": "MIT"
 }
