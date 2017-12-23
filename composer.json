@@ -20,7 +20,7 @@
     },
     "scripts": {
         "copy-phpunit-config": [
-            "cp -n tests/phpunit.xml.dist tests/phpunit.xml"
+            "[ -f tests/phpunit.xml ] || cp tests/phpunit.xml.dist tests/phpunit.xml"
         ],
         "post-install-cmd": [
             "@copy-phpunit-config"
