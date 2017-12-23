@@ -5,10 +5,10 @@ namespace c3037\Otus\FirstWeek\Library\IgnoreChar;
 interface IgnoredCharContainerInterface
 {
     /**
-     * @param IgnoredCharInterface $ignoredChar
-     * @return void
+     * @param IgnoredCharInterface[] $ignoredChars
+     * @return IgnoredCharContainerInterface
      */
-    public function add(IgnoredCharInterface $ignoredChar): void;
+    public function add(IgnoredCharInterface ...$ignoredChars): IgnoredCharContainerInterface;
 
     /**
      * @param string $symbol

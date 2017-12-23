@@ -12,9 +12,13 @@ final class IgnoredCharContainer implements IgnoredCharContainerInterface
     /**
      * {@inheritdoc}
      */
-    public function add(IgnoredCharInterface $ignoredChar): void
+    public function add(IgnoredCharInterface ...$ignoredChars): IgnoredCharContainerInterface
     {
-        $this->chars[$ignoredChar->getChar()] = 1;
+        foreach ($ignoredChars as $ignoredChar) {
+            $this->chars[$ignoredChar->getChar()] = 1;
+        }
+
+        return $this;
     }
 
     /**

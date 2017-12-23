@@ -5,9 +5,10 @@ namespace c3037\Otus\FirstWeek\Library\ValidationPair;
 interface ValidationPairContainerInterface
 {
     /**
-     * @param ValidationPairInterface $validationPair
+     * @param ValidationPairInterface[] $validationPairs
+     * @return ValidationPairContainerInterface
      */
-    public function add(ValidationPairInterface $validationPair): void;
+    public function add(ValidationPairInterface ...$validationPairs): ValidationPairContainerInterface;
 
     /**
      * @param string $symbol

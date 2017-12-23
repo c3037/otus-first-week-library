@@ -5,7 +5,7 @@ namespace c3037\Otus\FirstWeek\Library;
 use c3037\Otus\FirstWeek\Library\IgnoreChar\IgnoredCharContainerInterface;
 use c3037\Otus\FirstWeek\Library\OpenedSymbols\OpenedSymbolStackFactoryInterface;
 use c3037\Otus\FirstWeek\Library\OpenedSymbols\OpenedSymbolStackInterface;
-use c3037\Otus\FirstWeek\Library\ValidationPair\ValidationPairContainer;
+use c3037\Otus\FirstWeek\Library\ValidationPair\ValidationPairContainerInterface;
 use InvalidArgumentException;
 
 final class Validator implements ValidatorInterface
@@ -16,7 +16,7 @@ final class Validator implements ValidatorInterface
     private $ignoredChars;
 
     /**
-     * @var ValidationPairContainer
+     * @var ValidationPairContainerInterface
      */
     private $validationPairs;
 
@@ -27,12 +27,12 @@ final class Validator implements ValidatorInterface
 
     /**
      * @param IgnoredCharContainerInterface $ignoredChars
-     * @param ValidationPairContainer $validationPairs
+     * @param ValidationPairContainerInterface $validationPairs
      * @param OpenedSymbolStackFactoryInterface $openedSymbolStackFactory
      */
     public function __construct(
         IgnoredCharContainerInterface $ignoredChars,
-        ValidationPairContainer $validationPairs,
+        ValidationPairContainerInterface $validationPairs,
         OpenedSymbolStackFactoryInterface $openedSymbolStackFactory
     ) {
         $this->ignoredChars = $ignoredChars;

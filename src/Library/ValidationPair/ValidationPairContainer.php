@@ -12,9 +12,13 @@ final class ValidationPairContainer implements ValidationPairContainerInterface
     /**
      * {@inheritdoc}
      */
-    public function add(ValidationPairInterface $validationPair): void
+    public function add(ValidationPairInterface ...$validationPairs): ValidationPairContainerInterface
     {
-        $this->pairs[$validationPair->getOpenSymbol()] = $validationPair->getCloseSymbol();
+        foreach ($validationPairs as $validationPair) {
+            $this->pairs[$validationPair->getOpenSymbol()] = $validationPair->getCloseSymbol();
+        }
+
+        return $this;
     }
 
     /**
