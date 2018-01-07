@@ -14,7 +14,12 @@
     },
     "autoload": {
         "psr-4": {
-            "c3037\\Otus\\FirstWeek\\Library\\": ["src/Library/", "tests/Library/"]
+            "c3037\\Otus\\FirstWeek\\Library\\": ["src/Library/"]
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "c3037\\Otus\\FirstWeek\\Library\\": ["tests/Library/"]
         }
     },
     "scripts": {
