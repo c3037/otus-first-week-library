@@ -22,6 +22,7 @@ final class ValidationPair implements ValidationPairInterface
     {
         \assert(mb_strlen($openSymbol) === 1, sprintf("Open symbol '%s' is invalid", $openSymbol));
         \assert(mb_strlen($closeSymbol) === 1, sprintf("Close symbol '%s' is invalid", $openSymbol));
+        \assert($openSymbol !== $closeSymbol, 'Open and close symbols should be different');
 
         $this->openSymbol = $openSymbol;
         $this->closeSymbol = $closeSymbol;
